@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/splashScreenFragment">
+
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.example.skripsi.ui.splashscreen.SplashScreenFragment"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreenFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.example.skripsi.ui.dashboard.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_dashboardFragment_to_workoutFragment"
+            app:destination="@id/workoutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/workoutFragment"
+        android:name="com.example.skripsi.ui.workout.WorkoutFragment"
+        android:label="fragment_workout"
+        tools:layout="@layout/fragment_workout" >
+        <action
+            android:id="@+id/action_workoutFragment_to_doWorkoutFragment"
+            app:destination="@id/doWorkoutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/doWorkoutFragment"
+        android:name="com.example.skripsi.DoWorkoutFragment"
+        android:label="fragment_do_workout"
+        tools:layout="@layout/fragment_do_workout" >
+        <action
+            android:id="@+id/action_doWorkoutFragment_to_startWorkOutFragment"
+            app:destination="@id/startWorkOutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/startWorkOutFragment"
+        android:name="com.example.skripsi.StartWorkFragment"
+        android:label="fragment_start_work_out"
+        tools:layout="@layout/fragment_start_work_out" />
+    <fragment
+        android:id="@+id/profileFragment2"
+        android:name="com.example.skripsi.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+</navigation>
